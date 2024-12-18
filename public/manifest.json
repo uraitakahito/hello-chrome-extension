@@ -15,5 +15,11 @@
   "side_panel": {
     "default_path": "src/sidepanel/sidepanel.html"
   },
-  "permissions": ["sidePanel"]
+  "permissions": ["sidePanel"],
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["https://www.yahoo.co.jp/*"]
+    }
+  ]
 }
