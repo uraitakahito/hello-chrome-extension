@@ -9,7 +9,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
+        sidepanel: resolve(__dirname, 'src/sidepanel/sidepanel.html'),
         service_worker: resolve(__dirname, 'src/service_worker.js'),
       },
       output: {
