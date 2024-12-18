@@ -16,7 +16,7 @@ export default defineConfig({
         // https://rollupjs.org/configuration-options/#output-entryfilenames
         entryFileNames: ({ name }) => {
           if (name === 'service_worker') {
-            return 'service_worker.js';
+            return '[name].js';
           }
           return 'assets/[name].js';
         },
