@@ -11,6 +11,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         content: resolve(__dirname, 'src/content.js'),
+        options_page: resolve(__dirname, 'src/options_page/options_page.html'),
         sidepanel: resolve(__dirname, 'src/sidepanel/sidepanel.html'),
         service_worker: resolve(__dirname, 'src/service_worker.js'),
       },
