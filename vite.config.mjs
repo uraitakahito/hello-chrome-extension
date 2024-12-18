@@ -10,12 +10,15 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        content: resolve(__dirname, 'src/content.js'),
+        sidepanel: resolve(__dirname, 'src/sidepanel/sidepanel.html'),
         service_worker: resolve(__dirname, 'src/service_worker.js'),
       },
       output: {
         // https://rollupjs.org/configuration-options/#output-entryfilenames
         entryFileNames: ({ name }) => {
-          if (name === 'service_worker') {
+          const specialEntries = ['content', 'service_worker'];
+          if (specialEntries.includes(name)) {
             return '[name].js';
           }
           return 'assets/[name].js';
