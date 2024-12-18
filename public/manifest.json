@@ -21,5 +21,6 @@
       "js": ["content.js"],
       "matches": ["https://www.yahoo.co.jp/*"]
     }
-  ]
+  ],
+  "options_page": "src/options_page/options_page.html"
 }
